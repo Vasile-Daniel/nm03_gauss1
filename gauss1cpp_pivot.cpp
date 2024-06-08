@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
-#include <math.h>
+#include <cmath>
 
 /*
 EXAMPLE: 
@@ -108,24 +108,24 @@ public:
 // main function
 int main() {
     int n = 3;
-    // std::vector<std::vector<float>> a = {
-    //     {1, 2, -1},
-    //     {-2, 3, 1},
-    //     {4, -1, -3}
-    // };
-
-
-    // FOR: The problem mathematically ill-posed
     std::vector<std::vector<float>> a = {
-        { 2, -1, 1 },
-        { -4, 2, -2 },
-        { 4, -2, 4 }
+        {1, 2, -1},
+        {-2, 3, 1},
+        {4, -1, -3}
     };
 
 
-    // std::vector<float> b = {-1, 0, -2};
     // FOR: The problem mathematically ill-posed
-    std::vector<float> b = { 1, -2, 4 };
+    // std::vector<std::vector<float>> a = {
+    //     { 2, -1, 1 },
+    //     { -4, 2, -2 },
+    //     { 4, -2, 4 }
+    // };
+
+
+    std::vector<float> b = {-1, 0, -2};
+    // FOR: The problem mathematically ill-posed
+    // std::vector<float> b = { 1, -2, 4 };
 
     Gauss1 gauss1(n, a, b);
     gauss1.printMatrix();
