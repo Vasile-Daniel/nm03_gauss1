@@ -2,8 +2,13 @@
 // Project: Gauss Method 1
 // Author: Vasile Daniel DAN 
 // Start: Today, 6 June 2024
+/*
+EXAMPLE: 
+  1  2 -1 | -1 | x0 = 1
+ -2  3  1 |  0 | x1 = 0
+  4 -1 -3 | -2 | x2 = 2 
+ */
 
-// The order must be preserved: int rows, int cols, double matrix[rows][cols]
 void printMatrix(int n, double matrix[n][n]) {
     int i, j;
     for (i = 0; i < n; i++) {
