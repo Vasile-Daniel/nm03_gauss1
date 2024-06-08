@@ -2,18 +2,8 @@
 // Project: Gauss Method 1
 // Author: Vasile Daniel DAN 
 // Start: Today, 6 June 2024
-/*
-EXAMPLE: 
- | 1  2 -1 | -1 | x0 = 1;
- |-2  3  1 |  0 | x1 = 0;
- | 4 -1 -3 | -2 | x2 = 2;
-Dupa pivotare:
- | 1  2 -1   | -1   |   2/7 = 0.2857
- | 0  7 -1   | -2   |   4/7 = 0.5714
- | 0  0 -2/7 | -4/7 |
 
- */
-
+// The order must be preserved: int rows, int cols, double matrix[rows][cols]
 void printMatrix(int n, double matrix[n][n]) {
     int i, j;
     for (i = 0; i < n; i++) {
@@ -31,7 +21,7 @@ void printArray(int n, double arr[n]){
     }
 }
 
-void pivot(int n, double a[n][n], double b[n]){
+void elimination(int n, double a[n][n], double b[n]){
     int k, i, j;
     double p;
     for (k = 0; k < n-1; k++) {
@@ -82,7 +72,7 @@ int main() {
     printf("Initial vector b:\n");
     printArray(n, b);
 
-    pivot(n, a, b);
+    elimination(n, a, b);
 
     printf("After pivoting:\n");
     printMatrix(n, a);
