@@ -1,0 +1,19 @@
+// The first constructor uses an initializer list to initialize the member variables
+Gauss1(int n, std::vector<std::vector<float>> matrix, std::vector<float> arr) : N(n), Matrix(matrix), Arr(arr) {
+    X.resize(N); // Allocate space for the vector X
+}
+
+// The second constructor uses assignment within the constructor body to initialize the member variables
+Gauss1(int n, std::vector<std::vector<float>> matrix, std::vector<float> arr) {
+    N = n; 
+    Matrix = matrix; 
+    Arr = arr;
+    X.resize(N); // Allocate space for the vector X
+}
+
+---------------------------------------------------------------------------------------------------
+
+
+In C++, using an initializer list is generally preferred because it can be more efficient, especially for complex types. When you use an initializer list, the member variables are initialized directly, which can avoid unnecessary copying or default construction followed by assignment. For simple types like int or float, the difference is negligible, but for more complex types, the initializer list can provide better performance.
+
+However, in this particular case, both constructors achieve the same end result and are functionally equivalent. The choice between the two is mostly a matter of style and potential performance considerations. 

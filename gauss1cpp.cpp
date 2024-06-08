@@ -21,9 +21,19 @@ private:
     std::vector<float> X;
 
 public:
+
+    // The first constructor uses an initializer list to initialize the member variables
     Gauss1(int n, std::vector<std::vector<float>> matrix, std::vector<float> arr) : N(n), Matrix(matrix), Arr(arr) {
         X.resize(N); // Allocate space for the vector X
     }
+
+    // The second constructor uses assignment within the constructor body to initialize the member variables
+    // Gauss1(int n, std::vector<std::vector<float>> matrix, std::vector<float> arr) {
+    //     N = n; 
+    //     Matrix = matrix; 
+    //     Arr = arr;
+    //     X.resize(N); // Allocate space for the vector X
+    // }
 
     void printMatrix() {
         for (int i = 0; i < N; i++) {
