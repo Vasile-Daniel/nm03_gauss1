@@ -11,7 +11,7 @@ private:
 
 public:
     Gauss1(int n, std::vector<std::vector<float>> matrix, std::vector<float> arr) : N(n), Matrix(matrix), Arr(arr) {
-        X.resize(N); // Alocă spațiu pentru vectorul X
+        X.resize(N); // Allocate space for the vector X
     }
 
     void printMatrix() {
@@ -29,7 +29,7 @@ public:
         }
     }
 
-    void pivotare() {
+    void pivot() {
         int k, i, j;
         double p;
         for (k = 0; k < N - 1; k++) {
@@ -56,7 +56,7 @@ public:
             printf("x[%d] = %lf \n", i, X[i]);
         }
 
-        printf("Solutia sistemului de ecuatii este:\n");
+        printf("The solution to the system of equations is:\n");
         for (int k = 0; k < N; k++) {
             printf("x[%d] = %lf \n", k, X[k]);
         }
@@ -77,7 +77,7 @@ int main() {
     Gauss1 gauss1(n, a, b);
     gauss1.printMatrix();
     gauss1.printArray();
-    gauss1.pivotare();
+    gauss1.pivot();
     printf("After pivoting:\n");
     gauss1.printMatrix();
     gauss1.printArray();
