@@ -2,6 +2,17 @@
 #include <cstdlib>
 #include <vector>
 
+/*
+EXAMPLE: 
+ | 1  2 -1 | -1 | x0 = 1;
+ |-2  3  1 |  0 | x1 = 0;
+ | 4 -1 -3 | -2 | x2 = 2;
+Dupa pivotare:
+ | 1  2 -1   | -1   |   2/7 = 0.2857
+ | 0  7 -1   | -2   |   4/7 = 0.5714
+ | 0  0 -2/7 | -4/7 |
+
+ */
 class Gauss1 {
 private:
     int N;
